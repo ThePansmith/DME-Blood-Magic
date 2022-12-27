@@ -1,0 +1,15 @@
+[
+{
+  "modid": "deepmoblearningbm",
+  "name": "Deep Mob Evolution: Blood Magic",
+  "description": "Server-friendly virtual mob torture.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Pansmith, Bruberu"],
+  "logoFile": "assets/dmebloodmagic/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
