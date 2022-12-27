@@ -1,5 +1,5 @@
 # DME Blood Magic
- Blood Magic Compat for Deep Mob Learning
+ Blood Magic Compat for Deep Mob Evolution
  
  *** 
  
