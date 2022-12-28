@@ -1,7 +1,6 @@
 package deepmoblearningbm;
 
 import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.Mod;
 
 public class ModConstants {
     public static final String MODID = "deepmoblearningbm";
