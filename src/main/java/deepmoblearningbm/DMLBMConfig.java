@@ -7,7 +7,7 @@ import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Config(modid = ModConstants.MODID, name = DMLConstants.ModInfo.CONFIG_PATH + "/deepmobevolutionbm")
+@Config(modid = ModConstants.ModInfo.MODID, name = DMLConstants.ModInfo.CONFIG_PATH + "/deepmobevolutionbm")
 @Mod.EventBusSubscriber
 public class DMLBMConfig {
     @Config.Name("Machine Settings")
@@ -18,11 +18,19 @@ public class DMLBMConfig {
         @Config.Comment("Energy cost of Digital Agonizer in RF/t")
         @Config.RangeInt(min = 0, max = 10000)
         public int DIGITAL_AGONIZER_RF_COST = 256;
+        @Config.Name("Digital Agonizer RF Capacity")
+        @Config.Comment("Energy capacity of Digital Agonizer in RF")
+        @Config.RangeInt(min = 0)
+        public int DIGITAL_AGONIZER_RF_CAPACITY = 2147483647;
+        @Config.Name("Digital Agonizer max input RF/t")
+        @Config.Comment("Maximum RF/t Digital Agonizer can accept")
+        @Config.RangeInt(min = 0)
+        public int DIGITAL_AGONIZER_RF_INPUTMAX = 2147483647;
     }
     @SubscribeEvent
     public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
-        if (event.getModID().equals(ModConstants.MODID)) {
-            ConfigManager.sync(ModConstants.MODID, Config.Type.INSTANCE);
+        if (event.getModID().equals(ModConstants.ModInfo.MODID)) {
+            ConfigManager.sync(ModConstants.ModInfo.MODID, Config.Type.INSTANCE);
         }
     }
 
