@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"particle": "deepmoblearning:blocks/machine_red",
-		"sides": "deepmoblearning:blocks/machine_red",
-		"base": "deepmoblearning:blocks/machine_base"
+		"particle": "deepmoblearningbm:blocks/machine_red",
+		"sides": "deepmoblearningbm:blocks/machine_red",
+		"base": "deepmoblearningbm:blocks/machine_base"
 	},
 	"elements": [
 		{
@@ -295,37 +295,6 @@
 			"children": [1, 2, 3, 4, 5, 6, 7, 8]
 		},
 		9,
-		{
-			"name": "Front Decorations",
-			"origin": [8, 8, 8],
-			"color": 0,
-			"children": [
-				{
-					"name": "Top Left",
-					"origin": [8, 8, 8],
-					"color": 0,
-					"children": []
-				},
-				{
-					"name": "Top Right",
-					"origin": [8, 8, 8],
-					"color": 0,
-					"children": []
-				},
-				{
-					"name": "Bottom Right",
-					"origin": [8, 8, 8],
-					"color": 0,
-					"children": []
-				},
-				{
-					"name": "Bottom Left",
-					"origin": [8, 8, 8],
-					"color": 0,
-					"children": []
-				}
-			]
-		},
 		{
 			"name": "Side Decorations",
 			"origin": [8, 8, 8],
