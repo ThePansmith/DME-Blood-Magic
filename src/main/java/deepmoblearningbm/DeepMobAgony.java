@@ -7,11 +7,11 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = ModConstants.ModInfo.MODID, version = ModConstants.ModInfo.VERSION, dependencies =
+@Mod(modid = ModInfo.MODID, version = ModInfo.VERSION, dependencies =
         "required-after:deepmoblearning;required-after:bloodmagic;after:jei;after:twilightforest")
-public class DeepMobLearningBM {
-    @Mod.Instance(ModConstants.ModInfo.MODID)
-    public static DeepMobLearningBM instance;
+public class DeepMobAgony {
+    @Mod.Instance(ModInfo.MODID)
+    public static DeepMobAgony instance;
 
     public static Logger logger;
 

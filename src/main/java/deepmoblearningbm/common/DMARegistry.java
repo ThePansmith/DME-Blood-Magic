@@ -1,7 +1,7 @@
 package deepmoblearningbm.common;
 
-import deepmoblearningbm.DeepMobLearningBM;
-import deepmoblearningbm.ModConstants;
+import deepmoblearningbm.DeepMobAgony;
+import deepmoblearningbm.ModInfo;
 import deepmoblearningbm.common.blocks.BlockDigitalAgonizer;
 import deepmoblearningbm.common.tiles.TileEntityDigitalAgonizer;
 import mustapelto.deepmoblearning.common.blocks.BlockBase;
@@ -19,7 +19,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod.EventBusSubscriber
-public class DMLBMRegistry {
+public class DMARegistry {
     public static final NonNullList<Item> registeredItems = NonNullList.create();
     public static final NonNullList<BlockBase> registeredBlocks = NonNullList.create();
     //Items
@@ -28,18 +28,18 @@ public class DMLBMRegistry {
     public static final BlockDigitalAgonizer BLOCK_DIGITIAL_AGONIZER = new BlockDigitalAgonizer();
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        DeepMobLearningBM.logger.info("Registering Blocks...");
+        DeepMobAgony.logger.info("Registering Blocks...");
         registeredBlocks.add(BLOCK_DIGITIAL_AGONIZER);
 
         IForgeRegistry<Block> registry = event.getRegistry();
         registeredBlocks.forEach(registry::register);
 
         // Register tile entities
-        GameRegistry.registerTileEntity(TileEntityDigitalAgonizer.class,new ResourceLocation(ModConstants.ModInfo.MODID,"digital_agonizer"));
+        GameRegistry.registerTileEntity(TileEntityDigitalAgonizer.class,new ResourceLocation(ModInfo.MODID,"digital_agonizer"));
     }
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        DeepMobLearningBM.logger.info("Registering Items...");
+        DeepMobAgony.logger.info("Registering Items...");
 //
 //
         IForgeRegistry<Item> registry = event.getRegistry();
@@ -51,14 +51,14 @@ public class DMLBMRegistry {
 
     @SubscribeEvent
     public static void registerEntities(RegistryEvent.Register<EntityEntry> event) {
-        DeepMobLearningBM.logger.info("Registering Entities...");
+        DeepMobAgony.logger.info("Registering Entities...");
         IForgeRegistry<EntityEntry> registry = event.getRegistry();
     }
 
 
         @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
-        DeepMobLearningBM.logger.info("Registering Dynamic Recipes...");
+        DeepMobAgony.logger.info("Registering Dynamic Recipes...");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
         registry.registerAll(MetadataManager.getCraftingRecipes().toArray(new IRecipe[0]));
     }

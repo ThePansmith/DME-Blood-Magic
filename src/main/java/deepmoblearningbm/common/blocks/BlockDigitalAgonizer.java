@@ -16,5 +16,7 @@ public class BlockDigitalAgonizer extends BlockMachine {
 
     @Nullable
     @Override
-    public TileEntity createTileEntity(World world, IBlockState iBlockState) {return new TileEntityDigitalAgonizer();}
+    public TileEntity createTileEntity(World world, IBlockState iBlockState) {
+        return new TileEntityDigitalAgonizer();
+    }
 }
