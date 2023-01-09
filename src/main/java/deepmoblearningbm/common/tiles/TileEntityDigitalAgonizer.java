@@ -28,22 +28,12 @@ public class TileEntityDigitalAgonizer extends TileEntityMachine {
         }
     };
 
+
     public TileEntityDigitalAgonizer() {
         super(DMAConfig.MachineSettings.AGONIZER_RF_CAPACITY, RF_INPUTMAX);
     }
 
-    @SideOnly(Side.CLIENT)
-    @Override
-    public GuiContainerBase getGui(EntityPlayer player, World world) {
-        return new GuiDigitalAgonizer(this, player, world);
-    }
-
-    @Override
-    public ContainerTileEntity getContainer(InventoryPlayer inventoryPlayer) {
-        return new ContainerDigitalAgonizer(this, inventoryPlayer);
-    }
-
-    private void onDataModelChanged() { //todo: implement
+    private void onDataModelChanged() {
     }
 
     @Override
@@ -65,6 +55,14 @@ public class TileEntityDigitalAgonizer extends TileEntityMachine {
         return CraftingState.IDLE;
     }
 
+    @Override
+    public ContainerTileEntity getContainer(InventoryPlayer inventoryPlayer) {
+        return new ContainerDigitalAgonizer(this, inventoryPlayer);
+    }
+    @SideOnly(Side.CLIENT)
+    public GuiContainerBase getGui(EntityPlayer player, World world) {
+        return new GuiDigitalAgonizer(this, player, world);
+    }
     //TODO: Implement getDataModel
     public ItemStack getDataModel() {
         return inputDataModel.getStackInSlot(0);

@@ -12,13 +12,6 @@ public class DMAConfig {
     @Config.Name("Machine Settings")
     public static DMAConfig.MachineSettings MACHINE_SETTINGS = new DMAConfig.MachineSettings();
 
-    @SubscribeEvent
-    public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
-        if (event.getModID().equals(ModInfo.MODID)) {
-            ConfigManager.sync(ModInfo.MODID, Config.Type.INSTANCE);
-        }
-    }
-
     public static class MachineSettings {
         @Config.Name("Digital Agonizer RF Cost")
         @Config.Comment("Energy cost of Digital Agonizer in RF/t")
@@ -28,6 +21,12 @@ public class DMAConfig {
         @Config.Comment("Energy capacity of Digital Agonizer in RF")
         @Config.RangeInt(min = 0)
         public static int AGONIZER_RF_CAPACITY = 800_000;
+    }
+    @SubscribeEvent
+    public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
+        if (event.getModID().equals(ModInfo.MODID)) {
+            ConfigManager.sync(ModInfo.MODID, Config.Type.INSTANCE);
+        }
     }
 
 }

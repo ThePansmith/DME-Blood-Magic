@@ -6,8 +6,8 @@ import deepmoblearningbm.common.blocks.BlockDigitalAgonizer;
 import deepmoblearningbm.common.tiles.TileEntityDigitalAgonizer;
 import mustapelto.deepmoblearning.common.blocks.BlockBase;
 import mustapelto.deepmoblearning.common.metadata.MetadataManager;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.block.Block;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
@@ -26,7 +26,6 @@ public class DMARegistry {
 
     //Blocks
     public static final BlockDigitalAgonizer BLOCK_DIGITIAL_AGONIZER = new BlockDigitalAgonizer();
-
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         DeepMobAgony.logger.info("Registering Blocks...");
@@ -36,9 +35,8 @@ public class DMARegistry {
         registeredBlocks.forEach(registry::register);
 
         // Register tile entities
-        GameRegistry.registerTileEntity(TileEntityDigitalAgonizer.class, new ResourceLocation(ModInfo.MODID, "digital_agonizer"));
+        GameRegistry.registerTileEntity(TileEntityDigitalAgonizer.class,new ResourceLocation(ModInfo.MODID,"digital_agonizer"));
     }
-
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         DeepMobAgony.logger.info("Registering Items...");
@@ -58,7 +56,7 @@ public class DMARegistry {
     }
 
 
-    @SubscribeEvent
+        @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
         DeepMobAgony.logger.info("Registering Dynamic Recipes...");
         IForgeRegistry<IRecipe> registry = event.getRegistry();
