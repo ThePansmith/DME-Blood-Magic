@@ -12,7 +12,7 @@ import static mustapelto.deepmoblearning.DMLConstants.Gui.SimulationChamber.PLAY
 public class ContainerDigitalAgonizer extends ContainerTileEntity {
 
     public ContainerDigitalAgonizer(TileEntityDigitalAgonizer tileEntity, InventoryPlayer inventoryPlayer) {
-        super(tileEntity, inventoryPlayer, PLAYER_INVENTORY.X, PLAYER_INVENTORY.Y);
+        super(tileEntity, inventoryPlayer, PLAYER_INVENTORY.X, PLAYER_INVENTORY.Y); //TODO fix player inventory magic numbers
     }
 
     @Override

@@ -76,7 +76,7 @@ dependencies {
     }
     deobfCompile "curse.maven:jei-238222:3040523"
     deobfCompile "curse.maven:patchouli-306770:3162874"
-    deobfCompile "curse.maven:dme-737252:4276725"
+    compile files("libs/DeepMobEvolution-1.1.1.jar")
     deobfCompile "curse.maven:guide-api-228832:2645992"
     deobfCompile "curse.maven:blood-magic-224791:2822288"
 }
